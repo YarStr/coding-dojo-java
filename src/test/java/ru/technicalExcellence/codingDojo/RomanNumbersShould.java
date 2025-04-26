@@ -41,4 +41,9 @@ public class RomanNumbersShould {
     void return_II_then_2_is_given(){
         assertEquals("II", sut.get(2));
     }
+
+    @Test
+    void return_III_then_3_is_given(){
+        assertEquals("III", sut.get(3));
+    }
 }

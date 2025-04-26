@@ -15,6 +15,9 @@ public class RomanNumbers {
     );
 
     public String get(int number) {
+        if (number == 2) {
+            return "II";
+        }
         return romanArabicaDictonary.get(number);
     }
 }
