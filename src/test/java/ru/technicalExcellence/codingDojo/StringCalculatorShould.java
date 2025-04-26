@@ -36,4 +36,9 @@ public class StringCalculatorShould {
     void return_6_when_1_and_2_and_3_is_given_with_different_delimiters() {
         assertEquals(6, stringCalculator.add("1,2\n3"));
     }
+
+    @Test
+    void return_3_when_1_and_2_is_given_with_different_delimiters() {
+        assertEquals(3, stringCalculator.add("//;\n1;2"));
+    }
 }
