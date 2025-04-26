@@ -18,6 +18,7 @@ dependencies {
 
     testImplementation("org.mockito:mockito-core:$mockitoVersion")
     testImplementation("org.mockito:mockito-junit-jupiter:$mockitoVersion")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:$junitVersion")
 }
 
 tasks.withType<Test> {
