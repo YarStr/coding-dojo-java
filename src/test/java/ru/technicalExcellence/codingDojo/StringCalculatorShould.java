@@ -24,8 +24,7 @@ public class StringCalculatorShould {
 
     @ParameterizedTest
     @CsvSource({"0,0", "1,1"})
-    // fixme rename
-    void return_empty_when_empty_is_given(String input, Integer output) {
+    void return_number_when_number_is_given(String input, Integer output) {
         assertEquals(output, stringCalculator.add(input));
     }
 
@@ -47,5 +46,10 @@ public class StringCalculatorShould {
     @Test
     void throw_exception_when_negative_number_is_given() {
         assertThrows(IllegalArgumentException.class, () -> stringCalculator.add("-1,2"));
+    }
+
+    @Test
+    void red_test(){
+        assertThrows(IllegalArgumentException.class, () -> stringCalculator.add("-1,2,-3"));
     }
 }

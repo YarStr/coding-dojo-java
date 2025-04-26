@@ -9,6 +9,10 @@ public class StringCalculator {
         String[] numbers = value.split("[,|\n|;]");
         var sum = 0;
         for (String number : numbers) {
+            var parsedNumber = Integer.parseInt(number);
+            if(parsedNumber < 0) {
+                throw new IllegalArgumentException("Negatives not allowed: " + parsedNumber);
+            }
             sum += Integer.parseInt(number);
         }
         return sum;
