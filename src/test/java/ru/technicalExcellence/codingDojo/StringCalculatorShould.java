@@ -6,6 +6,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class StringCalculatorShould {
 
@@ -23,6 +24,7 @@ public class StringCalculatorShould {
 
     @ParameterizedTest
     @CsvSource({"0,0", "1,1"})
+    // fixme rename
     void return_empty_when_empty_is_given(String input, Integer output) {
         assertEquals(output, stringCalculator.add(input));
     }
@@ -40,5 +42,10 @@ public class StringCalculatorShould {
     @Test
     void return_3_when_1_and_2_is_given_with_different_delimiters() {
         assertEquals(3, stringCalculator.add("//;\n1;2"));
+    }
+
+    @Test
+    void throw_exception_when_negative_number_is_given() {
+        assertThrows(IllegalArgumentException.class, () -> stringCalculator.add("-1,2"));
     }
 }
