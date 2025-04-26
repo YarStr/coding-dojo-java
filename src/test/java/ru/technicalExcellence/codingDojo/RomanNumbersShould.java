@@ -8,11 +8,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
- * TODO 100 -> C
- * TODO 500 -> D
- * TODO 1000 -> M
- * TODO 2 -> II
- * TODO 3 -> III
+ * TODO 4 -> IV
+ * TODO 6 -> VI
+ * TODO 7 -> VII
+ * TODO 8 -> VIII
+ * TODO 9 -> IX
  */
 public class RomanNumbersShould {
     private RomanNumbers sut;
@@ -45,5 +45,10 @@ public class RomanNumbersShould {
     @Test
     void return_III_then_3_is_given(){
         assertEquals("III", sut.get(3));
+    }
+
+    @Test
+    void return_IV_then_4_is_given(){
+        assertEquals("IV", sut.get(4));
     }
 }
