@@ -53,6 +53,6 @@ public class RomanNumbersShould {
 
     @Test
     void return_VI_then_6_is_given(){
-        assertEquals("VI", sut.get(4));
+        assertEquals("VI", sut.get(6));
     }
 }
